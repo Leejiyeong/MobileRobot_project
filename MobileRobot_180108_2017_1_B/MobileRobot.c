@@ -195,43 +195,8 @@ int main(void)
 			
 			display_char(0, 0, flag);
 		}
-	}  		
+	} 
 }
-
-//라인을 Y축으로 흔들며 타는 함수 
-//int W는 로봇 보정속도 (-값을 넣으면 왼쪽으로 라인 타기, +값 넣으면 오른쪽으로 라인타기)
-//int speed는 로봇 직진속도 
-//int time은 라인 벗어남을 인지하는 시간
-
-/*int LineW(int W,int speed, int time)
-{
-	int Lcount = 0;
-	while(1)
-	{
-		if(READ_SENSOR() == 28)
-			return 1;
-		else if(READ_SENSOR() == 24)
-			return 2;
-		else if(READ_SENSOR() == 12)
-			return 3;
-		if(READ_SENSOR() == 0)
-		{
-			Lcount++;
-			if(Lcount > time)
-			return 0;
-		}
-		else Lcount=0;
-		if(READ_SENSOR() != 8)
-		{
-			non_Holonomic(speed,W,0);
-		}
-		else if(READ_SENSOR() == 8)
-		{
-			non_Holonomic(speed,-W,0);
-		}
-	}
-}*/
-
 
 
 int LineW(int W,int speed, int time)
